@@ -376,14 +376,14 @@ Try to look at the output with `less -RS TCRBOA2_${CHR_LOC}_filtered.vcf`.
 
 To add some extra information to the vcf-file, we will also annotate with SNP-ids. HaplotypeCaller can do this as it calls variants, but using Mutect2 we need to do it ourselves: 
 
-dbSNP needs to look like it is in your own folder, so once again we link it to
-your working directory:
+dbSNP needs to look like it is in your own folder, so once again we link it to your working directory:
 
 
         ln -s $dbsnp dbsnp_link.vcf 
         java -jar $snpSift annotate dbsnp_link.vcf  TCRBOA2_${CHR_LOC}_filtered.vcf > TCRBOA2_${CHR_LOC}_filtered_anno.vcf 
 
- 
+
+Note that this command may take up to 3 minutes. 
 Now try to filter mutational calls by selecting those with Mutect "PASS" annotation.
 
         grep PASS TCRBOA2_${CHR_LOC}_filtered_anno.vcf | grep -v "^#"  
