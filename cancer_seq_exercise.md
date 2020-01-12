@@ -296,14 +296,14 @@ Now, the resulting BAM files are ready to be processed with MuTect2.
 #### 3.1 - MuTect2 ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) 
 _All chromosomes took ~327 minutes, (~5.4 hours with four threads)_
 
-We are going to use "soft-links" to the input bam-files. This a way to avoid working with long paths and is an alternative to defining bash-variables. 
+We are going to use "soft-links" to the input bam-files and their indexes. This a way to avoid working with long paths and is an alternative to defining bash-variables. 
 
         mkdir variant_calling 
         cd variant_calling
         
         # create links   
-        ln -s /home/27626/exercises/cancer_seq/aligned/TCRBOA2-T-WEX_recaled.bam . 
-        ln -s /home/27626/exercises/cancer_seq/aligned/TCRBOA2-N-WEX_recaled.bam . 
+        ln -s /home/27626/exercises/cancer_seq/aligned/TCRBOA2-T-WEX_recaled.bam* . 
+        ln -s /home/27626/exercises/cancer_seq/aligned/TCRBOA2-N-WEX_recaled.bam* . 
        
 Use `ls -l` to see how they appear in your directory. 
 
@@ -376,7 +376,12 @@ Try to look at the output with `less -RS TCRBOA2_${CHR_LOC}_filtered.vcf`.
 
 To add some extra information to the vcf-file, we will also annotate with SNP-ids. HaplotypeCaller can do this as it calls variants, but using Mutect2 we need to do it ourselves: 
 
-        java -jar $snpSift annotate $dbsnp TCRBOA2_${CHR_LOC}_filtered.vcf > TCRBOA2_${CHR_LOC}_filtered_anno.vcf 
+dbSNP needs to look like it is in your own folder, so once again we link it to
+your working directory:
+
+
+        ln -s $dbsnp dbsnp_link.vcf 
+        java -jar $snpSift annotate dbsnp_link.vcf  TCRBOA2_${CHR_LOC}_filtered.vcf > TCRBOA2_${CHR_LOC}_filtered_anno.vcf 
 
  
 Now try to filter mutational calls by selecting those with Mutect "PASS" annotation.
