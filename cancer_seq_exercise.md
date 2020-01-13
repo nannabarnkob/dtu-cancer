@@ -30,13 +30,13 @@ These exercises are tested with:
 Known resources are important when working with human data and cancer seq. Luckily, the human is probably one of the most well-annotated species. 
 It is generally a good idea to try and use the most up-to-date version of all resources as possible, although a common caveat is that resources have to match and some might not yet be available for the newest versions. 
    
-All resources are based on the newest genome build, hg38. The previous and still extensively used build is hg37 (also known as hg19). Matching other resources with the genome build is important as genomic coordinates (location of chromosome e.g. chr:1 differ between genome builds, meaning that for instance a reported SNP has different coordinates depending on the build. You can read about this [here](https://gatk.broadinstitute.org/hc/en-us/articles/360035890951). 
+All resources are based on the newest genome build, hg38. The previous and still extensively used build is hg37 (also known as hg19). Matching other resources with the genome build is important as genomic coordinates (location of chromosome e.g. chr1:1001) differ between genome builds, meaning that, for instance, a reported SNP has different coordinates depending on the build. You can read about this [here](https://gatk.broadinstitute.org/hc/en-us/articles/360035890951). 
 
 
 Important points are also that naming needs to match: mentionable naming conventions are defined by ENSEMBL, NCBI (RefSeq) and UCSC. 
 In this exercise, the used resources are based on UCSC naming conventions: chromosomes are named chr1, chr2, ..., chrX, chrY and chrM (in "contrast" to ENSEMBL: 1, 2, X, Y and MT, and the less human-readable RefSeq: NC_000001.11, NC_000002.12, NC_000023.11, NC_000024.10 and NC_012920.1). Alternative scaffolds are named chr1_KI270765v1_alt.  
  
- 
+The resources include:  
 * GRCh38 (hg38) with UCSC 
 * dbSNP build 138    
 * COSMIC with 30,178,158 known cancer variants 
