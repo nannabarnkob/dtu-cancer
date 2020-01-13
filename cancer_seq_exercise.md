@@ -467,13 +467,13 @@ Look at the barcharts and play around with the options.
 Next we'll do some analysis on a VCF file containing somatic mutations found throughout
 the entire genome:
 
-        ls /home/27626/exercises/cancer_seq/variant_calling/TCRBOA2.vcf 
+        ls /home/27626/exercises/cancer_seq/variant_calling/TCRBOA2_filtered.vcf 
 
 Unlike VEP, TumorTracer requires VCF files to have the header information.
 Thus, we will filter this VCF file to retain: 1) header lines (which begin with "#"),
 and 2) data lines with a PASS call.
         
-        grep -E "^#|PASS" /home/27626/exercises/cancer_seq/variant_calling/TCRBOA2.vcf > TCRBOA2_filtered.vcf
+        grep -E "^#|PASS" /home/27626/exercises/cancer_seq/variant_calling/TCRBOA2_filtered.vcf > TCRBOA2_filtered_pass.vcf
 
 * Download the vcf-file and submit it to the 
 [TumorTracer server](http://www.cbs.dtu.dk/services/TumorTracer/).
