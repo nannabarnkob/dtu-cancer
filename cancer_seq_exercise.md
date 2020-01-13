@@ -72,9 +72,6 @@ Please note the Conditions of Data Use:
 
 The raw data files are located on the server at `/home/27626/exercises/cancer_seq`
 
-Much of this exercise is based on the Best Practices by [Broad Institute](https://www.broadinstitute.org/) by  MIT and Harvard and located in Cambridge, Massachusetts.
-The Broad provides the Genome Analysis Toolkit (gatk) which you will probably become very familiar with if you continue with genomics and NGS in the future. 
-Best practices for somatic variant calling can be found [here](https://software.broadinstitute.org/gatk/best-practices/workflow?id=11146).
    
   
 ## Somatic point mutation exercise
@@ -87,6 +84,9 @@ should you work with cancer patient sequencing data.
 
 The parts where you should actually run the code are marked with a green square: ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) 
 
+Much of this exercise is based on the Best Practices by [Broad Institute](https://www.broadinstitute.org/) by  MIT and Harvard and located in Cambridge, Massachusetts.
+The Broad provides the Genome Analysis Toolkit (gatk) which you will probably become very familiar with if you continue with genomics and NGS in the future. 
+Best practices for somatic variant calling can be found [here](https://software.broadinstitute.org/gatk/best-practices/workflow?id=11146).
 
 ## PART 1. Raw reads: inspection, QC, cleanup
 
