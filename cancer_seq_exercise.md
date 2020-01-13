@@ -37,10 +37,10 @@ In this exercise, the used resources are based on UCSC naming conventions: chrom
  
  
 * GRCh38 (hg38) with UCSC 
-* dbSNP 138    
-* COSMIC with 30178158 known cancer variants 
+* dbSNP build 138    
+* COSMIC with 30,178,158 known cancer variants 
 * Mills and 1000G genomes Gold Standard indels (known indels)
-* gnomAD for allelic frequencies   
+* gnomAD for allelic frequencies in population 
 
 All resources are in `/home/27626/exercises/cancer_seq/resources`. The genome has been bwa-indexed. Consider taking a look at the hg38.fa file. You can look at the header encoding with 
 
