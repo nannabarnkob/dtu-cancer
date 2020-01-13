@@ -14,11 +14,10 @@ Estimated time:  2 hours
 These exercises are tested with:
 * Picard v. 2.21.6 (http://broadinstitute.github.io/picard) 
 * GATK  v. 4.1.4.1 (https://github.com/broadinstitute/gatk)
-* BWA  v. 0.7.12
-* Samtools v. 1.3.1
-* Sequenza v. 2.1.2
-* R v. 3.5.2 
-* TrimGalore v. 0.6.5 
+* BWA  v. 0.7.12 (http://bio-bwa.sourceforge.net/) 
+* Samtools v. 1.3.1 (http://samtools.sourceforge.net/) 
+* R v. 3.5.2 (https://www.r-project.org/)  
+* TrimGalore v. 0.6.5 (https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/)  
 * fastqCombinePairedEnd.py (by [Eric Normandeau](https://github.com/enormandeau/Scripts/blob/master/fastqCombinePairedEnd.py))
 
 
